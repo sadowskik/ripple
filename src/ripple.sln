@@ -1,11 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ripple", "ripple\ripple.csproj", "{0DB48F71-0998-4421-8EB5-7B8020BF37B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ripple.Testing", "ripple.Testing\ripple.Testing.csproj", "{734921D6-8BB4-4B57-9D5A-ACF9BD515D49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ripple.Docs", "ripple.Docs\ripple.Docs.csproj", "{5F6B1A70-3A36-4A4D-90F5-884B7413A79E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{21F02B56-7801-48CD-AC87-49ECAD68724D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

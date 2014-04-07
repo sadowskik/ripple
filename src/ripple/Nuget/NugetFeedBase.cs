@@ -8,8 +8,12 @@ namespace ripple.Nuget
     public abstract class NugetFeedBase : INugetFeed
     {
         private static readonly NullRemoteNuget Null = new NullRemoteNuget();
-        private readonly Cache<CacheKey<Dependency>, IRemoteNuget> _findCache = new Cache<CacheKey<Dependency>, IRemoteNuget>();
-        private readonly Cache<CacheKey<string>, IRemoteNuget> _findLatest = new Cache<CacheKey<string>, IRemoteNuget>();
+        
+        private readonly ConcurrentCache<CacheKey<Dependency>, IRemoteNuget> _findCache =
+            new ConcurrentCache<CacheKey<Dependency>, IRemoteNuget>();
+
+        private readonly Cache<CacheKey<string>, IRemoteNuget> _findLatest =
+            new Cache<CacheKey<string>, IRemoteNuget>();
 
         public abstract bool IsOnline();
         public abstract void MarkOffline();
